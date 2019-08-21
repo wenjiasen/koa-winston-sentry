@@ -1,0 +1,44 @@
+{
+  "name": "@wenjs/koa-winston-sentry",
+  "version": "0.1.0",
+  "description": "A Sentry transport for Winston,Use for Koa.",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@sentry/integrations": "^5.6.1",
+    "@sentry/node": "^5.5.0",
+    "@wenjs/winston-sentry-transport": "^0.1.4",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.2",
+    "mocha": "^6.2.0",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./lib/*",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
+    "postversion": "git push --follow-tags"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenjiasen/koa-winston-sentry.git"
+  },
+  "author": "Jason wenjsen@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wenjiasen/koa-winston-sentry/issues"
+  },
+  "homepage": "https://github.com/wenjiasen/koa-winston-sentry#readme"
+}
