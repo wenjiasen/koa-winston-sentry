@@ -1,4 +1,5 @@
 import { SentryTransport, ISentryTransportOption, Sentry } from '@wenjs/winston-sentry-transport';
+import winstonTransport from 'winston-transport';
 import { RewriteFrames } from '@sentry/integrations';
 import winston from 'winston';
 
@@ -13,8 +14,9 @@ let logger: winston.Logger;
 
 const log = (info: any, next: () => void) => {
   const { level } = info;
+  // tslint:disable-next-line:no-console
   Sentry.withScope((scope) => {
-    info.tags && scope.setTags(info.tags);
+    scope.setTags({ test: '1' });
     info.extras && scope.setExtras(info.extras);
     if (info.contexts) {
       for (const key in info.contexts) {
@@ -58,15 +60,17 @@ const defaultSentryTransport: ILogConfig = {
  * configLogger
  * @param config config
  */
-const configLogger = (conf: ILogConfig, winstonInstance?: winston.Logger): winston.Logger => {
+const configLogger = (conf: ILogConfig, transports: winstonTransport[] = []): winston.Logger => {
   const config = Object.assign({}, defaultSentryTransport, conf);
   const sentryTransport = new SentryTransport({
     log,
     level: config.level,
     sentryConfig: config.sentryConfig
   });
-  logger = winstonInstance || winston.createLogger();
-  logger.transports.push(sentryTransport);
+  transports.push(sentryTransport);
+  logger = winston.createLogger({
+    transports
+  });
   return logger;
 };
 
