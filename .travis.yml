@@ -9,6 +9,7 @@ deploy:
   email: wenjsen@gmail.com
   api_key:
     secure: iJ0bf3twMSpyiJP8m1SSyphG0QHn4dPDJxU7W6pwkVBNQQAJW//LLwsR0QyYb2FpI2O9rkMvvySaXGvmOFbN5ersxgtuP1BWAB/o1IrZGrGljXV1ogeT2XZk5zJCn5Fd/eHjKg/vnPdUNnunCirt5g2UJMI3jPo8hnnRYuApkGsNd2LXKENWHrhf8KiBShFmDFf483vrKy74E7qwrlCLJ11YhhWuLJuBvuuHPhsemLJLiqfeaw63tyezlYQBWK9HvFNi7HpGRtlONTbrJmHF0GkE+d54LLiHD4zz4fldtyHG7SzewLSds7+JVd0WXCm26dNbU584PsU2DdnHhCmGkj3+ZEHqFAS4wo3AJUjPkNCEiY2Io/q0VPiEhHkTmqaUmb9l5D+FDoPLBsd+g+vIy4BpU/s30mg+ux0T49NVmj2h0uoVSFs8fl0l5osPnWk/6oCzfo2iZUeYxSJ5Klbk6WFz81J5wqJ7WKrKIsdLaNIXJCh6FaUqEcbHFXRJmBJ0mXk1fAuEbB77F6s69+ER4Xcclc56IdyZvD7lZnWrMcX+aodbe9G5J73SNLktU5TBtPkSJdm7uTs+6ij/0crN4jhaErkpt0I5euWCwn+2bnVhXbJxrojPzW3AvkQFz8KvK47MKvzpawGHBIixBstnp6hrCzVcoRn56/S9y8Ee7Ns=
+  skip_cleanup: true
   on:
     tags: true
     repo: wenjiasen/koa-winston-sentry
