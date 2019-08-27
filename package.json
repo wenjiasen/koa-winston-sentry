@@ -3,6 +3,7 @@
   "version": "0.1.3",
   "description": "A Sentry transport for Winston,Use for Koa.",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "directories": {
     "lib": "lib"
   },
