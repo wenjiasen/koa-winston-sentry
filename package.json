@@ -1,6 +1,6 @@
 {
   "name": "@wenjs/koa-winston-sentry",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A Sentry transport for Winston,Use for Koa.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
